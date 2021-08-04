@@ -18,17 +18,18 @@ Descrição
 - [Índice](#índice)
 - [Como-Usar](#como-usar)
 - [Testes](#testes)
+- [Status](#status)
 <!--te-->
 
 
 Como-Usar
 =================
 
-#Pre-Requisitos
+#Pré Requesitos
 * Java 14
 * Docker instalado
 
-#Subindo-Aplicacao
+#Subindo Aplicação
 * Clonar repositório
 * Navergar até a pasta do arquivo docker-compose.yml
 * Rodar comando <b>docker-compose up -d</b>
@@ -41,14 +42,19 @@ Como-Usar
 Testes
 =================
 * Fazer uma requesição POST 
+<p>
 curl --location --request POST 'http://localhost:8080/cliente/' \
 --form 'id="1"' \
 --form 'nome="Deyvid Fernandes"' \
 --form 'idade="33"'
+</p>
 
-Resultado esperado é produzir uma mensagem no formato json no tópico DEV.CLIENTE, uma forma de validar é exeutando o seguinte comando: docker exec -ti broker ../../bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic DEV.CLIENTE --from-beginning
+* Resultado esperado é produzir uma mensagem no formato json no tópico DEV.CLIENTE, uma forma de validar é exeutando o seguinte comando: 
+<p>docker exec -ti broker ../../bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic DEV.CLIENTE --from-beginning</p>
 
 
+Status
+=================
 <h4 align="center"> 
 	🚧  kafka - Em construção...  🚧
 </h4>
