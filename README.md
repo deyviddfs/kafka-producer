@@ -16,13 +16,13 @@ Descrição
 <!--ts-->
 - [Descrição](#descrição)
 - [Índice](#índice)
-- [Como-Usar](#como-usar)
+- [Como Usar](#como-usar)
 - [Testes](#testes)
 - [Status](#status)
 <!--te-->
 
 
-Como-Usar
+Como Usar
 =================
 
 #Pré Requesitos
@@ -31,9 +31,9 @@ Como-Usar
 
 #Subindo Aplicação
 * Clonar repositório
-* Navergar até a pasta do arquivo docker-compose.yml
+* Navegar até a pasta do arquivo docker-compose.yml
 * Rodar comando <b>docker-compose up -d</b>
-* Validar se foi tudo criado e está UP com o comando docker-compose ps
+* Validar se foi tudo criado e está UP com o comando <b>docker-compose ps</b>
 * Abrir o projeto cliente-producer
 * Subir as duas aplicações através da classe SpringApplication
 
