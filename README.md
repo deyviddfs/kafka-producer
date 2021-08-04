@@ -1,8 +1,8 @@
 <h1 align="center">Kafka Producer</h1>
 
-Descrição do Projeto
+Descrição
 =================
-<p align="center">Exemplo de implementação de um micro serviço produtor de mensagens para o kafka com Spring Boot.</p>
+<p align="center">Exemplo de implementação de um micro serviço produtor de mensagens para o kafka utilizando o Spring Boot.</p>
 
 <p align="center">
   <img alt="GitHub branch checks state" src="https://img.shields.io/github/checks-status/deyviddfs/kafka-producer/main">
@@ -14,27 +14,40 @@ Descrição do Projeto
 Índice
 =================
 <!--ts-->
-* [Descrição do Projeto](#Descrição do Projeto)
-* [Instalação](#Instalação)
-* [Como Usar](#como-usar)
-    * [Pre Requisitos](#pre-requisitos)
-    * [Local files](#local-files)
-    * [Combo](#combo)
-* [Testes](#testes)
+- [Descrição](#descrição)
+- [Índice](#índice)
+- [Como-Usar](#como-usar)
+- [Testes](#testes)
 <!--te-->
 
 
-Instalação
+Como-Usar
 =================
-TDB
 
-como-usar
-=================
-TDB
+#Pre-Requisitos
+* Java 14
+* Docker instalado
+
+#Subindo-Aplicacao
+* Clonar repositório
+* Navergar até a pasta do arquivo docker-compose.yml
+* Rodar comando <b>docker-compose up -d</b>
+* Validar se foi tudo criado e está UP com o comando docker-compose ps
+* Abrir o projeto cliente-producer
+* Subir as duas aplicações através da classe SpringApplication
+
+
 
 Testes
 =================
-TDB
+* Fazer uma requesição POST 
+curl --location --request POST 'http://localhost:8080/cliente/' \
+--form 'id="1"' \
+--form 'nome="Deyvid Fernandes"' \
+--form 'idade="33"'
+
+Resultado esperado é produzir uma mensagem no formato json no tópico DEV.CLIENTE, uma forma de validar é exeutando o seguinte comando: docker exec -ti broker ../../bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic DEV.CLIENTE --from-beginning
+
 
 <h4 align="center"> 
 	🚧  kafka - Em construção...  🚧
