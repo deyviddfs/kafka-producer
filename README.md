@@ -41,7 +41,7 @@ Como Usar
 
 Testes
 =================
-* Fazer uma requesição POST 
+* Fazer uma requisição POST 
   <p>
   curl --location --request POST 'http://localhost:8080/cliente/' \
   --form 'id="1"' \
