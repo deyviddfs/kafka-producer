@@ -42,15 +42,15 @@ Como Usar
 Testes
 =================
 * Fazer uma requesição POST 
-<p>
-curl --location --request POST 'http://localhost:8080/cliente/' \
---form 'id="1"' \
---form 'nome="Deyvid Fernandes"' \
---form 'idade="33"'
-</p>
+  <p>
+  curl --location --request POST 'http://localhost:8080/cliente/' \
+  --form 'id="1"' \
+  --form 'nome="Deyvid Fernandes"' \
+  --form 'idade="33"'
+  </p>
 
 * Resultado esperado é produzir uma mensagem no formato json no tópico DEV.CLIENTE, uma forma de validar é exeutando o seguinte comando: 
-<p>docker exec -ti broker ../../bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic DEV.CLIENTE --from-beginning</p>
+  <p>docker exec -ti broker ../../bin/kafka-console-consumer --bootstrap-server localhost:9092 --topic DEV.CLIENTE --from-beginning</p>
 
 
 Status
